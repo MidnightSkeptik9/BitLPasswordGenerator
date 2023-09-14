@@ -3,14 +3,14 @@ import pyautogui # not used but I will leave it for your use if you so choose
 
 # define a list of characters that can appear within a bitlocker
 # recovery password
-characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+characters = '0123456789'
 characterList = list(characters)
 
 # define a funtion to make a password as a list with specific formatting
 # refer to Model 1 within README.md to see an example list
 def makePassword(): # *** returns a list *** #
     password = []
-    for _ in range(0, 8):
+    for _ in range(0, 12):
         nestedList = []
         for _ in range(0, 4):
             char = random.choice(characterList)
@@ -26,10 +26,8 @@ def formatAsString(listObject): # *** returns a string *** #
         for y in range(0, 4):
             char = listObject[x][y]
             passwordString += str(char)
-        passwordString += '-'
     # this creates an invalid password with a hyphen at the end
-    # so we use removesuffix() to get rid of it
-    passwordString = passwordString.removesuffix('-')
+    # so we use removesuffix() to get rid of 
     return passwordString
 
 # making a password:
