@@ -1,4 +1,4 @@
-# PasswordCracker
+# BitLPasswordGenerator
 
 ## Model 1
 An example of the result of the first function called <u>makePassword()</u> when printed to the console.
